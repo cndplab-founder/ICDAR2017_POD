@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ICDAR 2017 Page Object Detection Competition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- styles -->
+    <link href="css/styles.css" rel="stylesheet">
+    <script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-5">
+	              <!-- Logo -->
+	              <div class="logo">
+	                 <h1><a href="index.html">ICDAR 2017 POD Competition</a></h1>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
+	</div>
+
+    <div class="page-content">
+    	<div class="row">
+		  <div class="col-md-2">
+		  	<div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                    <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                    <li><a href="schedual.html"> Schedual</a></li>
+                    <li><a href="dataset.html"> Dataset</a></li>
+                    <li><a href="evaluation.html"> Evaluation</a></li>
+                    <li><a href="protocol.html"> Protocol</a></li>
+                    <li><a href="results.html"> Results</a></li>
+                    <li><a href="organizer.html"> Organizers</a></li>
+                </ul>
+             </div>
+		  </div>
+		  <div class="col-md-10">
+		  	<div class="row">
+		  		<div class="col-md-12 panel-warning">
+		  			<div class="content-box-header panel-heading">
+	  					<div class="panel-title ">Evaluation</div>
+		  			</div>
+		  			<div class="content-box-large box-with-header">
+                        <br>A sample of submission can be download <u><a href='./data/Submission.zip'>here</a></u>. 
+			  			<h3>Results format</h3>
+                <br>Participants should submit the results in one XML file, which resembles the annotations, list the name of the test set and the objects found in them.
+						  <h3>Evaluation</h3>
+                          <br>We will calculate the <i>Intersection over Union (IOU)</i> measurement to estimate whether a region detected by the participant is correctly located or not. Let \(S_i\) denote the region detected by a participant and \(S_j\) denote the corresponding region described in the ground truth file. The <i>IOU</i> is calculated as follows:
+                          \[IOU = \frac{S_i\bigcap S_j}{S_i\bigcup S_j}\]
+                          <p style="text-align:center"><img src="images/fig3.png" width="350"></p>
+                          As shown in Fig. 3, \(S_i\bigcap S_j\) denotes the area of the intersection of \(S_i\) and \(S_j\) and \(S_i\bigcup S_j\) denotes the area of the union of \(S_i\) and \(S_j\) . The <i>IOU</i> is then calculated as the following equation.
+                          \[IOU =\frac{S_i\bigcap S_j}{S_i+S_j-S_i\bigcap S_j}\]
+                          
+                <br>If the <i>IOU</i> value is larger than a threshold, this region will be considered correctly detected. We will evaluate the results under two \(\mathit{IOU\_THRESHOLD}\) 0.6 and 0.8 considering different precision requirement.
+                <br><br><i>Average Precision (AP)</i> is the metric to evaluate each sub-task. For a given sub-task, the precision/recall curve is computed from a methods ranked output. Recall is defined as the proportion of all positive examples ranked above a given rank. Precision is the proportion of all examples above that rank which are from the positive class. The <i>AP</i> summarises the shape of the precision/recall curve, and is defined as the mean precision at a set of eleven equally spaced recall levels \([0,0.1,\cdots,1]\):
+                \[AP = \frac{1}{11}\times\sum_{r\in\{0,0.1,\dots,1\}}\mathit{Pinterp}(P)\]
+                <br>The precision at each recall level \(r\) is interpolated by taking the maximum precision measured for a method for which the corresponding recall exceeds \(r\):
+                \[\mathit{Pinterp}(P) = \max_{\tilde{r}:\tilde{r}\ge r}\mathit{p}(\tilde{r})\]
+                Where \(p(\tilde{r})\) is the measured precision at recall \(\tilde{r}\). For those participate in the integrated task, the <i>mean Average Precision (mAP)</i> is calculated to evaluate the submitted results.
+                <br><br>In addition, we also take the \(F1\) metric into consideration, a results ranked by \(F1\) metric will also be reported.
+                <br><br>In summary, the competition will evaluate the participant's models under two different metrics: \(mAPs\) and \(F1\), with two \(IOU\_THRESHOLD\) 0.6 and 0.8.
+				<h3>Evaluation Details</h3>
+				<li>Small page objects (with height <= 30pixels and width <= 30pixels) will be ignored in evaluation.</li>
+				<li>The object which is a line will be ignored in evaluation.</li>
+                <br><br><b>For any questions, please contact chlxyd@pku.edu.cn.</b>
+					</div>
+		  		</div>
+		  	</div>
+
+		  	
+		  </div>
+		</div>
+    </div>
+
+    <!--<footer>
+         <div class="container">
+         
+            <div class="copy text-center">
+               Copyright 2014 <a href='#'>Website</a>
+            </div>
+            
+         </div>
+      </footer>-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    
+  </body>
+</html>

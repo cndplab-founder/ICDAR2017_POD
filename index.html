@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ICDAR 2017 Page Object Detection Competition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-5">
+	              <!-- Logo -->
+	              <div class="logo">
+	                 <h1><a href="index.html">ICDAR 2017 POD Competition </a></h1>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
+	</div>
+
+    <div class="page-content">
+    	<div class="row">
+		  <div class="col-md-2">
+		  	<div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                    <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                    <li><a href="schedual.html"> Schedual</a></li>
+                    <li><a href="dataset.html"> Dataset</a></li>
+                    <li><a href="evaluation.html"> Evaluation</a></li>
+                    <li><a href="protocol.html"> Protocol</a></li>
+                    <li><a href="results.html"> Results</a></li>
+                    <li><a href="organizer.html"> Organizers</a></li>
+                </ul>
+             </div>
+		  </div>
+		  <div class="col-md-10">
+		  	<div class="row">
+		  		<div class="col-md-12 panel-warning">
+		  			<div class="content-box-header panel-heading">
+	  					<div class="panel-title ">Home</div>
+		  			</div>
+		  			<div class="content-box-large box-with-header">
+						<h3><b><font color="#FF0000">(2017/5/29)Notice: The submit deadline is extended for one week, and the due is June,7 12:00 AM, UTC+8.</font></b></h3>		
+						<h3><b><font color="#FF0000">(2017/5/1)Notice: The Testing dataset is released, which can be downloaded <u><a href='./data/Test.zip'>here</a></u>. Evaluation details are updated, see <a href="evaluation.html"> Evaluation</a>. Some confused annotations in the training dataset have been corrected, see <a href="dataset.html"> Dataset</a>.</font></b></h3>
+						<h3><b><font color="#FF0000">(2017/4/19)Notice: The Training dataset is released, which can be downloaded <u><a href='./data/Train.zip'>here</a></u>.</font></b></h3>
+						<h3><b><font color="#FF0000">(2017/3/20)Notice: The starting time of competition have been extended to April 20. Samples of the dataset can be downloaded <u><a href='./data/Samples.zip'>here</a></u>.</font></b></h3>
+            			<h3>Overview</h3>
+                                <br>Page Object Detection(POD) is to detect the specific page objects(e.g. tables, formulas, figures(including charts)) in document images. The dataset contains more than 2000 images with various kinds of page objects. Participants are required to detect these page objects in the provided dataset.
+              <!--<br><a href="downloadfile/myfile.zip" target="_self">download</a>-->
+                            	<!--<p style="text-align:center">
+                                    <img src="images/fig0.png" width="450">
+                                </p>-->
+			  				
+            			<h3>BackGround</h3>
+              				<br>Document Image Understanding (DIU) is an interesting research area with a large variety of challenging problems, which has been receiving increasing attention not only from the document analysis and recognition community, but also from the database and information extraction (IE) communities. Researchers have worked for decades on this topic, as witnessed by scientific literatures. Document image understanding is the task of deriving a high level presentation of the contents of a document image, which involves several phases, mainly including page segmentation (or block segmentation), blocks classification (or blocks labeling) and several operations for processing text, tables, graphics, figures, formulas, etc. Page segmentation, also known as "layout analysis" or "page decomposition", is the process by which a document page image is decomposed into its structural and logical units, such as images, tables, paragraphs, line-art regions, etc. This process is critical for a variety of document image analysis applications. Blocks classification aims at producing a description of the geometric structure of the document, identifying the different logical roles of the detected regions (paragraphs, tables, mathematical equations, figures, etc) and the spatial relationships among them. This competition focuses on the first two phases of document image understanding, locating the logical objects in document pages. The targeted page objects of this competition includes formulas, tables, and images or graphs(including charts). The objective of this competition is to compare the relative advantages of different types of approaches and find the state-of-the-art methods.
+              		<h3>Tasks</h3>
+              				<br>The POD competition consists of four tasks:
+              				<ol type="a">
+              				  <b><li>Detection of formulas</li>
+							         <li>Detection of tables</li>
+							         <li>Detection of figures</li>
+							         <li>Detection of page objects</li></b>
+							        </ol>
+							     <br>The first three tasks aim at individual page objects, and the fourth aims all the three kinds of page objects.
+						<h3>Dataset</h3>
+                        <br>The competition dataset consists of 2000 English document page images selected from 1500 scientific papers of <I>CiteSeer</I>. The dataset shows good variety in both page layout styles and object styles, for more information, see <a href="dataset.html">Dataset</a>.
+						<h3>Evaluation</h3>
+							<br>The Intersection over Union (IOU) measurement is utilized to estimate whether a objects detected by participant is correctly located or not, and the integrated results are judged by Mean Average Precision(mAps), which is generally used in natural scene image object detection competition. In addition, we also take the F1 metric into consideration, a results ranked by F1 metric will also be reported. For more information, see <a href="evaluation.html">Evaluation</a>.
+						<h3>Important dates</h3>
+							<br>
+                        
+                        <li>Competition announcement: February 1, 2017 </li>
+                        <li>Release samples with ground truths of the Competition: March 20, 2017 </li> 
+                        <li>Release the Competition Training Dataset: <s>April 1, 2017</s> <font color="#FF0000">April 20, 2017</font> </li>
+                        <li>Release the Competition Testing Dataset: <s>April 10, 2017</s> <font color="#FF0000">May 1, 2017</font> </li>
+                        <li>Deadline of results submission: <s>May 10, 2017</s> <font color="#FF0000"><s>May 30, 2017</s> June 7,2017</font> </li>
+                        <li>Release the Annotations of Testing Dataset and Evaluation Tools: June 30, 2017 </li>
+                        <h3>Contact</h3>
+                            <br><b>Xiaohan Yi(chlxyd@pku.edu.cn)</b>
+                            <br><p>Content Protection and Document Processing(CPDP), Institute of Computer Science and Technology of Peking University</p>
+                    </div>
+		  		</div>
+		  	</div>
+
+		  	
+		  </div>
+		</div>
+    </div>
+
+    <!--<footer>
+         <div class="container">
+         
+            <div class="copy text-center">
+               Copyright 2014 <a href='#'>Website</a>
+            </div>
+            
+         </div>
+      </footer>-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>

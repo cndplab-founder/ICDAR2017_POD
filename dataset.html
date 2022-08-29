@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ICDAR 2017 Page Object Detection Competition</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="header">
+	     <div class="container">
+	        <div class="row">
+	           <div class="col-md-5">
+	              <!-- Logo -->
+	              <div class="logo">
+	                 <h1><a href="index.html">ICDAR 2017 POD Competition</a></h1>
+	              </div>
+	           </div>
+	        </div>
+	     </div>
+	</div>
+
+    <div class="page-content">
+    	<div class="row">
+		  <div class="col-md-2">
+		  	<div class="sidebar content-box" style="display: block;">
+                <ul class="nav">
+                    <!-- Main menu -->
+                    <li class="current"><a href="index.html"><i class="glyphicon glyphicon-home"></i> Home</a></li>
+                    <li><a href="schedual.html"> Schedual</a></li>
+                    <li><a href="dataset.html"> Dataset</a></li>
+                    <li><a href="evaluation.html"> Evaluation</a></li>
+                    <li><a href="protocol.html"> Protocol</a></li>
+                    <li><a href="results.html"> Results</a></li>
+                    <li><a href="organizer.html"> Organizers</a></li>
+                </ul>
+             </div>
+		  </div>
+		  <div class="col-md-10">
+		  	<div class="row">
+		  		<div class="col-md-12 panel-warning">
+		  			<div class="content-box-header panel-heading">
+	  					<div class="panel-title ">Dataset</div>
+		  			</div>
+		  			<div class="content-box-large box-with-header">
+					<h3><b><font color="#FF0000">(2022/9/1) Notice: A novel supplement dataset version is published in <u><a href='https://github.com/cndplab-founder/ICDAR2017_POD_dataset_supplement.git'>ICDAR2017_POD_dataset_supplement</a></u>, which includes annotations for table structure recognition, from Prof. Cheng-Lin Liu's Group, Institute of Automation, Chinese Academy of Sciences. Thank Cheng-Lin Liu's Group for their helpful contributions! </font></b></h3>
+			  			<br>
+                            <!--<li>Samples of dataset can be downloaded <a href=''>here</a>.</li>
+                            <li>Train set can be downloaded <a href=''>here</a>.</li>
+                            <li>Test set can be downloaded <a href=''>here</a>.</li>-->
+                            <!--<li>Samples of dataset can be downloaded <u><a href='./data/Samples.zip'>here</a></u>.</li>-->
+                            <li>Train set can be downloaded <u><a href='./data/Train.zip'>here</a></u>.</li> 
+                            <li>Test set can be downloaded <u><a href='./data/Test.zip'>here</a></u>.</li>
+				<h3>Overview</h3>
+                <br>The competition dataset consists of 2000 English document page images selected from 1500 scientic papers of <I><B>CiteSeer</B></I>. The dataset shows good variety in both page layout styles and object styles, including single-column pages, two-column pages, multi-column pages and various kinds of formulas, tables, graphics and figures. Fig.1 shows a few page examples.
+                <p style="text-align:center">
+                    <img src="images/fig1_1.png" width="450">
+                    <img src="images/fig1_2.png" width="450">
+                    <br>Fig. 1. Examples of the page images of the dataset
+                </p>
+                <br>In the dataset, each page image is accompanied by a XML file containing its ground truth describing the three kinds of objects to be detected: formulas, tables and figures or images(including charts).
+                <h3>Annotation format</h3>
+                <br>The annotations refers to the <a href= 'http://www.primaresearch.org/publications/ICPR2010_Pletschacher_PAGE'>PAGE Format</a>. Object regions are defined as rectangular areas of a given page by their coordinates. For each sub-task, entrants are required to return its rectangular bounding-box in image coordinates. The origin coordinate is at the upper left corner of the document page image. Fig.2 illustrates the exact format of the ground truth XML file of the formulas corresponding to the page image in Fig.1 (b). Each tag represents one detected region in the corresponding page image. The kinds of regions are set to <b>FormulaRegion</b>, <b>TableRegion</b> and <b>FigureRegion</b> according to the class of the detected area. Note that multiline formulas are composed of several formula lines and a table can span more than one column, participants should merge the blocks that belongs to one logical object in a page, as shown in Fig.2. More specically, embedded formulas(tiny formulas contained in a text line) are regarded as a part of the text line. Only isolated formulas are included in the ground truth. And the caption of a table or a graphic is regarded as text line. The detected regions of tables and figures should not include its caption areas. 
+					<p style="text-align:center">
+                    <img src="images/fig2_1.png" width="350">
+                    <img src="images/fig2_2.png" width="450">
+                    <br>Fig. 2. page image and the corresponding ground truth file
+                </p>
+                
+                <br><br><b>For any questions, please contact chlxyd@pku.edu.cn.</b>
+              </div>
+		  		</div>
+		  	</div>
+
+		  	
+		  </div>
+		</div>
+    </div>
+
+    <!--<footer>
+         <div class="container">
+         
+            <div class="copy text-center">
+               Copyright 2014 <a href='#'>Website</a>
+            </div>
+            
+         </div>
+      </footer>-->
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>
