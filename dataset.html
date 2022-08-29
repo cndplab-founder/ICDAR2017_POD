@@ -63,16 +63,16 @@
 				<h3>Overview</h3>
                 <br>The competition dataset consists of 2000 English document page images selected from 1500 scientic papers of <I><B>CiteSeer</B></I>. The dataset shows good variety in both page layout styles and object styles, including single-column pages, two-column pages, multi-column pages and various kinds of formulas, tables, graphics and figures. Fig.1 shows a few page examples.
                 <p style="text-align:center">
-                    <img src="images/fig1_1.png" width="450">
-                    <img src="images/fig1_2.png" width="450">
+                    <img src="images/fig1_1.PNG" width="450">
+                    <img src="images/fig1_2.PNG" width="450">
                     <br>Fig. 1. Examples of the page images of the dataset
                 </p>
                 <br>In the dataset, each page image is accompanied by a XML file containing its ground truth describing the three kinds of objects to be detected: formulas, tables and figures or images(including charts).
                 <h3>Annotation format</h3>
                 <br>The annotations refers to the <a href= 'http://www.primaresearch.org/publications/ICPR2010_Pletschacher_PAGE'>PAGE Format</a>. Object regions are defined as rectangular areas of a given page by their coordinates. For each sub-task, entrants are required to return its rectangular bounding-box in image coordinates. The origin coordinate is at the upper left corner of the document page image. Fig.2 illustrates the exact format of the ground truth XML file of the formulas corresponding to the page image in Fig.1 (b). Each tag represents one detected region in the corresponding page image. The kinds of regions are set to <b>FormulaRegion</b>, <b>TableRegion</b> and <b>FigureRegion</b> according to the class of the detected area. Note that multiline formulas are composed of several formula lines and a table can span more than one column, participants should merge the blocks that belongs to one logical object in a page, as shown in Fig.2. More specically, embedded formulas(tiny formulas contained in a text line) are regarded as a part of the text line. Only isolated formulas are included in the ground truth. And the caption of a table or a graphic is regarded as text line. The detected regions of tables and figures should not include its caption areas. 
 					<p style="text-align:center">
-                    <img src="images/fig2_1.png" width="350">
-                    <img src="images/fig2_2.png" width="450">
+                    <img src="images/fig2_1.PNG" width="350">
+                    <img src="images/fig2_2.PNG" width="450">
                     <br>Fig. 2. page image and the corresponding ground truth file
                 </p>
                 
